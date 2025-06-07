@@ -1,0 +1,19 @@
+# CI de Nível 01 - Disparo manual a partir do clique no botão "Run workflow"
+
+name: "Execução Manual dos Testes"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalando o npm na máquina
+        run: npm install
+
+      - name: Executando os Testes Unitários
+        run: npm run run-tests
