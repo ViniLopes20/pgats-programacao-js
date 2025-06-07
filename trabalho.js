@@ -2,7 +2,7 @@ import { dogsList } from './dados-testes-trabalho-final.js';
 
 // Teste 01
 export function geradorDeTagsDeIdentificacao(nome) {
-  return nome.toUpperCase();
+  return nome.toLowerCase();
 }
 
 dogsList.forEach(dog => {
